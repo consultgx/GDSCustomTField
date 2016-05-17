@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GDSCustomTField" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,93 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lwf-dt-0eS">
+                                <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="309" id="Flc-Qc-wjX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Flc-Qc-wjX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Flc-Qc-wjX"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="touchUpInside:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Dd5-ok-Y2J"/>
+                                    <action selector="valChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="D8W-4i-G1y"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5td-sR-waI"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sQx-Fr-oCN">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="Ghc-tR-qMI"/>
+                                </constraints>
+                                <state key="normal" title="Send"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Ghc-tR-qMI"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="Ghc-tR-qMI"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <action selector="sendClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s89-AA-1SU"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="sQx-Fr-oCN" secondAttribute="trailing" constant="-15" id="7NO-Nm-Upa"/>
+                            <constraint firstItem="sQx-Fr-oCN" firstAttribute="leading" secondItem="lwf-dt-0eS" secondAttribute="trailing" constant="6" id="9zc-Pi-ikn"/>
+                            <constraint firstItem="lwf-dt-0eS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-15" id="RWl-f4-saD"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sQx-Fr-oCN" secondAttribute="bottom" constant="276" id="dbX-Yo-V1l"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="lwf-dt-0eS" secondAttribute="bottom" constant="276" id="pOP-V3-eur"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="lwf-dt-0eS"/>
+                                <exclude reference="sQx-Fr-oCN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="dbX-Yo-V1l"/>
+                                <exclude reference="pOP-V3-eur"/>
+                                <exclude reference="RWl-f4-saD"/>
+                                <exclude reference="7NO-Nm-Upa"/>
+                                <exclude reference="9zc-Pi-ikn"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="lwf-dt-0eS"/>
+                                <include reference="sQx-Fr-oCN"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="dbX-Yo-V1l"/>
+                                <include reference="pOP-V3-eur"/>
+                                <include reference="RWl-f4-saD"/>
+                                <include reference="7NO-Nm-Upa"/>
+                                <include reference="9zc-Pi-ikn"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="txtField" destination="lwf-dt-0eS" id="OUa-DH-DPc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="339" y="429"/>
         </scene>
     </scenes>
 </document>

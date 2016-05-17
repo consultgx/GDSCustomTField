@@ -14,6 +14,7 @@
 		DCD284C11CEBAA49002CA78B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCD284BF1CEBAA49002CA78B /* LaunchScreen.storyboard */; };
 		DCD284CC1CEBAA49002CA78B /* GDSCustomTFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD284CB1CEBAA49002CA78B /* GDSCustomTFieldTests.swift */; };
 		DCD284D71CEBAA49002CA78B /* GDSCustomTFieldUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD284D61CEBAA49002CA78B /* GDSCustomTFieldUITests.swift */; };
+		DCD284E91CEBAAD9002CA78B /* GDSView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCD284E81CEBAAD9002CA78B /* GDSView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		DCD284D21CEBAA49002CA78B /* GDSCustomTFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GDSCustomTFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCD284D61CEBAA49002CA78B /* GDSCustomTFieldUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GDSCustomTFieldUITests.swift; sourceTree = "<group>"; };
 		DCD284D81CEBAA49002CA78B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DCD284E81CEBAAD9002CA78B /* GDSView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GDSView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +99,8 @@
 		DCD284B51CEBAA49002CA78B /* GDSCustomTField */ = {
 			isa = PBXGroup;
 			children = (
+				DCD284E61CEBAAD9002CA78B /* Controllers */,
+				DCD284E71CEBAAD9002CA78B /* Views */,
 				DCD284B61CEBAA49002CA78B /* AppDelegate.swift */,
 				DCD284B81CEBAA49002CA78B /* ViewController.swift */,
 				DCD284BA1CEBAA49002CA78B /* Main.storyboard */,
@@ -123,6 +127,21 @@
 				DCD284D81CEBAA49002CA78B /* Info.plist */,
 			);
 			path = GDSCustomTFieldUITests;
+			sourceTree = "<group>";
+		};
+		DCD284E61CEBAAD9002CA78B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DCD284E71CEBAAD9002CA78B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DCD284E81CEBAAD9002CA78B /* GDSView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +275,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCD284E91CEBAAD9002CA78B /* GDSView.swift in Sources */,
 				DCD284B91CEBAA49002CA78B /* ViewController.swift in Sources */,
 				DCD284B71CEBAA49002CA78B /* AppDelegate.swift in Sources */,
 			);
@@ -398,6 +418,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GDSCustomTField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GDS.GDSCustomTField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +430,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = GDSCustomTField/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.GDS.GDSCustomTField;
 				PRODUCT_NAME = "$(TARGET_NAME)";
